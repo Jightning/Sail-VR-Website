@@ -1,0 +1,1007 @@
+/* General: */
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+body{
+    background-color: white;
+    font-family: "Aboreto";
+    font-size: 15px;
+    background-image: url("unOptimized-Images/sail_promo_v3_blured.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+    line-height: 1.3;
+}
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    width: 100%
+    /* Curse of not being able to write anything after this width for some reason that I can't explain */
+}  
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Top bar: */
+#top_bar{
+    color: black;
+    /* margin-top: 120px; */
+    position: sticky;
+    /* top: 130px; */
+    top: 10.5%;
+    font-weight: 1000;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 3.8px;
+    border-radius: 15px;
+    padding: 4px;
+    z-index: 9998; /*TOP BAR ON TOP (second) BABYYYYY (logo has to be higher)*/
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 90%;
+    margin: auto;
+}
+#intro_vid{
+    display: block;
+    transform: translateY(5px);
+}
+#tbButtons{
+    list-style: none;
+    overflow: hidden;
+    font-family: "Chelsea Market";
+    /* font-size: 20px; */
+    font-size: 1.7vw;
+    
+}
+.downlDropContent, .tbClassButtons {
+    float: left;
+}
+/*Split the top bar in half*/
+#rightBar{
+    float: right;
+}
+/*Style the dropdown for the top bar*/
+.tbClassButtons, .downlDrop{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+.tbClassButtons:hover, .tbClassButtonsDown:hover, .downDroped:hover .downlDrop {
+    background-color: rgba(197, 140, 54, 0.877);
+    
+}
+.downDroped {
+    display: inline-block;
+}
+.downlDropContent {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999; /*just in case*/
+}
+/*Round only the corners of the dropdown*/
+.tbClassButtons{
+    border-radius: 15px;
+}
+.toptopbar:hover, .downDroped:hover .downlDrop{
+    border-top-right-radius: 15px; border-top-left-radius: 15px;
+}
+.bottomtopbar:hover, .downDroped:hover .downlDrop{
+    border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;
+}
+.downlDropContent a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.downDroped:hover .downlDropContent {
+    display: block;
+
+}
+/*Dropdown styling done*/
+/* Game Explanation Section: */
+#logo{
+    transform: translateY(-200px);
+    position: sticky;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    z-index: 9999;
+    contain: size;
+}
+
+#game_ex{
+    color: black;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('unOptimized-Images/sail_promo_v3 grunged.png') no-repeat center center/
+    cover;
+    color: white;
+    font-size: 20px;
+}
+
+#game_ex h1{
+    position: relative;
+    top: 2px;
+    /* border: solid rgba(156, 111, 43, 0.6); */
+    /* background-color: rgba(197, 140, 54, 0.6); */
+    border-width: 4px;
+    border-bottom-width: 2px;
+    background-color: black;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 10px;
+    margin: 0.2px;
+    font-size: 2.5vw;
+}
+#game_ex p{
+    font-weight: bold;
+    /* color: rgba(43, 29, 8, 0.6); */
+    color: white;
+    border-width: 4px;
+    /* background-color: rgba(228, 161, 62, 0.6);
+    border-top: solid rgba(179, 127, 51, 0.6);
+    border-bottom: solid rgba(179, 127, 51, 0.6); */
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    font-size: 1.55vw;
+
+}
+#geTp{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/* Game Explanation Elaboration Section: */
+#game_elab{
+    background: url('unOptimized-Images/Sailimg7_grunged.jpg') no-repeat center center/
+    cover; 
+    box-sizing: border-box;
+    z-index: 0;
+
+}
+.swiper {
+    position: relative;
+    width: 50%;
+    height: 90%;
+    top: 200px;
+    cursor: grab;
+    border-radius: 10px;
+    
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper-slide h1{
+    position: absolute;
+    bottom: 80%;
+    color: white;
+    text-align: center;
+    left: 35%;
+    font-size: 3.5vw;
+    font-family: Almendra SC;
+    border-top: solid;
+    border-bottom: solid;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color:rgb(110, 78, 28);
+}
+.swiper .swiper-pagination-bullet-active{
+    position: relative;
+    background:rgb(110, 78, 28);
+    bottom: 60%;
+}
+
+/* What's Next Section: */
+#whats_next{
+    background: url('Optimized-Images/Sail img 5 grunged.png') no-repeat center center/
+    cover; 
+    align-items: center;
+    /*6x5 grid (top row null due to the top bar covering it)*/
+}
+#whats_next_Next{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 2.5vw;
+    font-weight: bolder;
+    top: 267%;
+    left: 0;
+    letter-spacing: 1.5vw;
+    text-align: center;
+    padding: 2%;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #000000;
+    border-width: 0.3vw;
+    background-color: rgba(134, 104, 39, 0.2);
+    width: 25%;
+    height: 7%;
+    transform: rotate(-90deg);
+    z-index: 2;
+    transition: all .5s ease 0.25s;
+}
+#whats_next_title{
+    transition: all .5s ease 0.25s;
+}
+@media screen and (max-width: 1045px){
+    #whats_next_Next{
+        left: -.5%;
+    }
+}
+@media screen and (max-height: 1045px){
+    #whats_next_Next{
+        left: -.5%;
+    }
+}
+#whats_next_title:hover > #whats_next_Next{
+    transition-delay: 0s;
+    color: black;
+    border-color: white;
+    transform: rotate(0deg);
+    left: 5%;
+    top: 242%;
+    height: 58%;
+}
+#whats_next_content{
+    position: absolute;
+    top: 257%; 
+    line-height: 4vw;
+    color: white;
+    text-align: center;
+    left: 14%;
+    transform: rotate(-90deg);
+    opacity: 0;
+    transition: all .8s ease 0.2s;
+
+}
+#whats_next_img{
+    height: 30%;
+    width: 24%;
+    position: absolute;
+    left: 7.5%;
+    top: 274%;
+    border-radius: 15px;
+    border: solid;
+    border-color: grey;
+    opacity: 0;
+    transition: all 0.5s ease 0.1s;
+}
+#whats_next_title:hover > #whats_next_content{
+    transition-delay: 0s;
+    opacity: 1;
+    top: 257%;
+    transform: rotate(0deg);
+}
+#whats_next_title:hover > #whats_next_img{
+    transition-delay: 0s;
+    transition-duration: 1.5s;
+    opacity: 1;
+}
+#whats_next_title:hover ~ #wnFillerImg img{
+    opacity: 0;
+    transition-delay: 0s;
+}
+#whats_next_title:hover ~ #wnFillerImg h1{
+    transform: rotate(90deg);
+    right: 44%;
+    top: 270%;
+    transition-delay: 0s;
+}
+#wnFillerImg img{
+    height: 40%;
+    width: 25%;
+    position: absolute;
+    top: 262%;
+    right: 55%;
+    border-radius: 15px;
+    transition: all 0.3s ease 0.3s;
+    z-index: 0;
+}
+#wnFillerImg h1{
+    color: white;
+    position: absolute;
+    top: 246%;
+    right: 54%;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: black;
+    padding: 1% 2%;
+    font-size: 2vw;
+    background-color: rgba(134, 104, 39, 0.2);
+    border-width: 0.7vh;
+    transition: all 0.6s ease 0.25s;
+}
+#wnFillerImg img:hover{
+    transform: rotate(10deg);
+    transition-delay: 0s;
+}
+#NiMain-container{
+    position: absolute;
+    top: 242%;
+    align-items: center;
+    left: 50%;
+    border-radius: 20px;
+    height: 68%;
+    width: 40%;
+    background: rgb(254,255,0);
+    background: linear-gradient(55deg, rgba(254,255,0,1) 17%, rgba(150,146,59,1) 100%);    
+    transition: all .5s;
+}
+#NiMain{
+    background-color: rgb(204, 157, 57);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    transition: transform .4s;
+}
+#NiMain h2{
+    padding-bottom: 4%;
+}
+#NiMain p{
+    font-size: 1.5vw;
+    padding: 1%;
+    overflow-wrap: normal;
+}
+#NiMain h2 span{
+    font-weight: 100;
+}
+#NiMain img{
+    height: 40%;
+    width: 55%;
+    position: absolute;
+    bottom: 5%;
+    right: 45%;
+    z-index: 1;
+}
+#secret_ducky{
+    z-index: 0;
+    position: absolute;
+    left: 0%;
+    top: 55%;
+    height: 40%;
+    width: 45%;
+    border-radius: 0 100px 100px 0;
+    background-color: red;
+    transition: all .4s;
+}
+#secret_ducky img{
+    position: relative;
+    right: 4%;
+    top: 16%;
+    height: 80%;
+    width: 80%;
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .8s;
+}
+#duckimg.duckmoveright{
+    right: -400%;
+    opacity: 0;
+}
+#duckimg.duckorigin{
+    right: 4%;
+}
+#secret_ducky h4{
+    padding-top: 2%;
+    position: relative;
+    bottom: 80%;
+    font-size: 1vw;
+    right: 10%;
+}
+#secret_ducky h3{
+    padding-top: 2%;
+    position: relative;
+    bottom: 80%;
+    font-size: 1vw;
+    left: 10%;
+}
+#duck_hiddenText{
+    position: relative;
+    top: -100%;
+    opacity: 0;
+}
+#secret_ducky:hover{
+    left: 55%;
+    height: 50%;
+    top: 50%;
+}
+#secret_ducky:hover > #secret_ducky img{
+    height: 80%;
+    width: 80%;
+}
+#NiMain img:hover ~ #secret_ducky{
+    left: 55%;
+    height: 50%;
+    top: 50%;
+}
+#NiMain img:hover ~ #secret_ducky img{
+    height: 80%;
+    width: 80%;
+}
+#NiMain:hover{
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+#NiMain-container:hover{
+    box-shadow: 0px 0px 30px 1px rgba(229, 255, 0, 0.3);
+}
+/* New Section: */
+#new{
+    background: url('Optimized-Images/Sail img 4 grunged.png') no-repeat center center/
+    cover; 
+}
+.newStuff{
+    position: relative; 
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    border: solid;
+    background-color: rgba(134, 92, 29, 0.6);
+    border-color: rgb(153, 107, 34);
+    top: 140px;
+    border-width: 4px;
+    font-family: "Almendra SC";
+    flex-wrap: nowrap;
+}
+#newBox{
+    overflow: hidden;
+    height: 56.4%;
+    width: 90%;
+    left: 4%;
+}
+#whatsNew{
+    width: 15%;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+.boxesNew{
+    float: left;
+    width: 32%;
+    height: 100%;
+    border-right: solid;
+    border-width: 5px;
+    border-color: rgb(153, 107, 34);
+    padding: 10px;
+}
+#newBox h1{
+    font-size: 35px;
+}
+#earlyAccessNew h1{
+    color: rgb(207, 206, 206);
+}
+#demoNew h1{
+    color: rgb(80, 50, 17);
+}
+#newBox ul{
+    font-size: 20px;
+}
+#demoNew li{
+    text-align: center;
+    font-size: 1.6vw;
+}
+/* wont allow for me to add class to patreonNew div so coppy whatever is in boxesNew after the border color onto patreonNew*/
+#patreonNew{
+    padding: 10px;
+}
+#patreonNew h1{
+    color: rgb(219, 191, 30)
+}
+#patreonNew h1, #patreonNew ul{
+    position: relative;
+    left: 10px;
+}
+#new img{
+    float: right;
+    position: relative;
+    right: 100px;
+    border: hidden;
+    border-radius: 15px;
+}
+
+/* download section: */
+#downloads{
+    /* background: url('Optimized-Images/Sail img 6 grunged.png') no-repeat center center/
+    cover; */
+    background: url('unOptimized-Images/old-map-bad-grunged.png') no-repeat center center/
+    cover;
+    flex-direction: column;
+
+}
+#dlslogan{
+    border-top: solid;
+    /* border-bottom: solid; */
+    color: black;
+    position: relative;    
+    width: 40%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-color: rgb(110, 78, 28);
+    border-width: 4px;
+    border-radius: 10px;
+    top: 155px;
+    font-weight: 1000;
+    font-size: 2.1vw;
+}
+.dlbtndivs{
+    width: 35%;
+    /*gotta squeeze as much height as possible lol*/
+    position: absolute;
+    align-self: flex-end;
+    text-align: center;
+    border-top: solid;
+    border-bottom: solid;
+    padding: 15px;
+    color: black;
+    border-color: rgb(196, 163, 18);
+    border-width: 4px;
+    font-size: 1.25vw;
+    transition-property: all;
+    transition-duration: 1.8s;
+    transition-timing-function: ease;
+}
+#oculusDl{
+    top: 458%;
+    right: 54.3%;
+    height: 10%;
+    z-index: 0.9;
+}
+#steamDl{
+    top: 458%;
+    right: 9%;
+    height: 10%;
+    z-index: 0.9;
+}
+#demoDl{
+    position: absolute;
+    width: 45%;
+    height: 5%;
+    top: 485%;
+    right: 25.5%;
+    margin: auto;
+    padding: 2%;
+
+    border-color: rgb(110, 78, 28);
+    transition: all 1s cubic-bezier(0,1.07,1,1) 0ms;
+    -o-transition: all 1s cubic-bezier(0,1.07,1,1) 0ms;
+    -moz-transition: all 1s cubic-bezier(0,1.07,1,1) 0ms;
+    -webkit-transition: all 1s cubic-bezier(0,1.07,1,1) 0ms;
+    /* transition: height, bottom 1s cubic-bezier(0,1.07,1,1) 0ms; */
+}
+.ocDlspan, .stDlspan, .demDlspan{
+    position: absolute;
+    transition-property: opacity, top;
+    transition-duration: 2s, 1s;
+    width: 100%;
+    right: 0%;
+    top: 110%;
+    opacity: 0;
+    pointer-events: none
+}
+#ocoDlbtn{
+    position: absolute;
+    padding: 3% ;
+    border: solid;
+    border-radius: 15px;
+    font-size: 1.8vw;
+    top: 20%;
+    right: 20%;
+    transition-property: all; 
+    transition-duration: 1s;
+    height: 15%;
+    background-color: rgb(37, 37, 37);
+    border-color: rgb(8, 99, 202);
+    font-weight: bold;
+    font-family: 'Almendra SC';
+    vertical-align: middle;
+    display: table;
+}
+#ocoDlbtn span{
+    background: #0C3ACF;
+    background-image: linear-gradient(to right, #0C3ACF 0%, #178BCF 77%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+#ocoDlbtn:hover{
+    font-size: 1.9vw;
+    right: 19%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.ocDlspan h2{
+    font-size: 1.1vw;
+}
+.ocDlspan img{
+    position: relative;
+    height: 30%;
+    width: 20%;
+    top: 7vw;
+    border-radius: 15px;
+    border: solid;
+    border-color: rgb(200,200,200)
+}
+
+#stDlbtn{
+    position: absolute;
+    background-color: rgb(37, 37, 37);
+    padding: 4%;
+    border: solid;
+    border-radius: 15px;
+    font-size: 1.83vw;
+    top: 20%;
+    right: 24%;
+    transition-property: all; 
+    transition-duration: 1s;
+    height: 15%;
+    border-color: white;
+    font-family: 'Almendra SC';
+    vertical-align: middle;
+    display: table;
+    font-weight: bold;
+
+}
+#stDlbtn span{
+    background: #FFFFFF;
+    background: linear-gradient(to right, #FFFFFF 0%, #E0E0E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#stDlbtn:hover{
+    font-size: 1.93vw;
+    right: 22.8%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.stDlspan h2{
+    font-size: 1.1vw;
+}
+.stDlspan img{
+    position: relative;
+    height: 40%;
+    width: 30%;
+    top: 60px;
+    border-radius: 15px;
+    border: solid;
+    border-color: rgb(200,200,200)
+}
+
+#demDlbtn{
+    position: absolute;
+    background-color: rgb(37, 37, 37);
+    color:rgb(158, 108, 33);
+    padding: 4%;
+    border: solid;
+    border-radius: 15px;
+    font-size: 1.83vw;
+    top: 120%;
+    right: 32%;
+    transition-property: all; 
+    transition-duration: 1s;
+    height: 10%;
+    border-color: white;
+    font-family: 'Almendra SC';
+    vertical-align: middle;
+    display: table;
+    font-weight: bold;
+
+}
+#demDlbtn:hover{
+    font-size: 1.93vw;
+    right: 31%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.demDlspan h2{
+    font-size: 1.1vw;
+}
+.demDlspan img{
+    position: relative;
+    height: 40%;
+    width: 30%;
+    top: 60px;
+    border-radius: 15px;
+    border: solid;
+    border-color: rgb(200,200,200)
+}
+
+
+#oculusDl:hover, #steamDl:hover{
+    height: 49%;
+    top: 453%;
+    border-bottom: hidden;
+}
+#demoDl:hover{
+    height: 29%;
+    top: 475%;
+    border-bottom: hidden;
+
+}
+#demoDl:hover ~ #oculusDl{
+    color: red;
+}
+#oculusDl:hover ~ #demoDl{
+    /* width: 40%; */
+    right: 4%;
+    transition-delay: 0ms;
+}
+#steamDl:hover ~ #demoDl{
+    /* width: 40%; */
+    right: 50%;
+    transition-delay: 0ms;
+}
+.dlbtndivs:hover .ocDlspan, .dlbtndivs:hover .stDlspan, .dlbtndivs:hover .demDlspan{
+    opacity: 1;
+    top: 29%;
+}
+@media (prefers-reduced-motion: reduce) {
+    .html {
+      transition: none;
+    }
+}
+/*Support sections*/
+#support{
+    background: url('unOptimized-Images/Sail img 6 grunged.png') no-repeat center center/
+    cover;
+    align-items: center;
+    text-align: center;
+    
+}
+#sprt_title{
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 540%;
+    font-weight: bold;
+    font-size: 2.7vw;
+    color: white;
+}
+.support_secs{
+    color: white;
+    position: absolute;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 0.3vw;
+    letter-spacing: 1vw;
+    background-color: rgba(196, 148, 45, 0.212);
+    padding: 1% 10%;
+    border-radius: 0px;
+}
+#paypal_ben_cont{
+    top: 555%;
+    font-size: 1.5vw;
+    height: 7%;
+    width: 16%;
+    transition: all 0.7s ease 0.2s;
+}
+#store_ben_cont{
+    top: 571%;
+    font-size: 1vw;
+    height: 5%;
+    width: 23%;
+    transition: all 0.7s ease 0.2s;
+}
+#patreon_ben_cont{
+    top: 585%;
+    height: 9%;
+    width: 30%;
+    font-size: 2vw;
+    transition: all 0.7s ease 0.2s;
+}
+#patreon_ben_cont:hover ~ #store_ben_cont{
+    top: 550%;
+    transition-delay: 0s;
+    color: red;
+}
+#patreon_ben_cont:hover, #paypal_ben_cont:hover, #store_ben_cont:hover{
+    height: 55%;
+    width: 50%;
+    top: 550%;
+    background-color: rgba(196, 148, 45, 0.616);
+    border-color: black;
+    letter-spacing: 1vw;
+    font-size: 1.5vw;
+    transition-delay: 0s;
+    border-radius: 15px;
+    z-index: 2;
+}
+.supportHid{
+    transition: all 1s ease;
+}
+.supportbtns{
+    color: white;
+    position: relative;
+    top: 60px;
+    letter-spacing: 0.5vw;
+    border: solid;
+    font-size: 100%;
+    border-radius: 15px;
+    padding: 3% 6%;
+    font-weight: bold;
+    border-width: 0.2vw;
+    transition: all 1s ease;
+}
+.supportbtns:hover{
+    font-size: 120%;
+    border-width: 0.25vw;
+    font-weight: bolder;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+#paypalHid{
+    opacity: 0;
+}
+#supPaypalbtn{
+    background: rgb(32, 147, 224);
+    background-color: linear-gradient(55deg, rgba(23,33,199,1) 25%, rgba(25,180,205,1) 100%);
+}
+#supPaypalbtn:hover{
+    border-color: white;
+    color: rgb(4, 0, 255);
+}
+#paypal_ben_cont:hover > #paypalHid{
+    opacity: 1;
+}
+#storeHid{
+    opacity: 0;
+}
+#supAmazonbtn{
+    background: rgb(255, 183, 29);
+}
+#supAmazonbtn:hover{
+    border-color: white;
+    color: rgb(0, 0, 0);
+}
+#store_ben_cont:hover > #storeHid{
+    opacity: 1;
+}
+#patreonHid{
+    opacity: 0;
+}
+#supPatreonbtn{
+    background: rgb(255, 41, 58);
+    background-color: linear-gradient(55deg, rgba(23,33,199,1) 25%, rgba(25,180,205,1) 100%);
+}
+#supPatreonbtn:hover{
+    border-color: white;
+    color: rgb(20, 18, 29);
+}
+#patreon_ben_cont:hover > #patreonHid{
+    opacity: 1;
+    transition-delay: 0s;
+}
+/* Socials section: */
+#socials{
+    color: black;
+    top: 50px;
+    background: url('Optimized-Images/Sail img 5 grunged.png') no-repeat center center/
+    cover;
+    display: inline-block;
+}
+#socials h1{
+    position: relative;
+    text-align: center;
+    top: 27%;
+    margin: auto;
+    font-weight: bold;
+    font-size: 2.7vw;
+    color: white;
+}
+#socials a{
+    position: relative;
+    top: 35%;
+    left: 14.5%;
+    margin: 2%;
+    color: rgb(250, 250, 250); 
+    height: 10%;
+    width: 5%;
+    box-sizing: border-box;
+    transition: all 1s ease 200ms;
+}
+
+#socials a:hover{
+    width: 20%;
+    height: 10%;
+    top: 33%;
+    transition-delay: 0ms;
+}
+#soDis:hover{
+    color: rgb(114,137,218);
+}
+#soTw:hover{
+    color: rgb(29, 161, 242);
+}
+#soYu:hover{
+    color: rgb(255, 0, 0);
+}
+#soTik:hover{
+    color: black;
+}
+#soInt:hover{
+    color: white;
+}
+#soFa:hover{
+    color: rgb(66 103 178);
+}
+#soRed:hover{
+    color: rgb(255, 69, 0);
+}
+#socials img{
+    position: relative;
+    height: 40%;
+    width: 35%;
+    left: 33%;;
+    top: 40%;
+
+}
+#blank_social_div{
+    position: absolute;
+    top: 653%;
+    background-color: rgba(161, 138, 32, 0.5);
+    width: 85%;
+    left: 7.5%;
+    height: 17%;
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(90, 76, 16);
+    border-width: 0.5vw;
+    transition: all 1s;
+}
+#blank_social_div h1{
+    visibility: hidden;
+}
+
+
+
+
+/*Scroll transitions*/
+.hide{
+    opacity: 0;
+    transition: all 1s ease 0ms;
+}
+.show{
+    opacity: 1;
+}
+
+
+/* .fade-in-text{
+    position: relative;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+@keyframes fadeIn{
+    0% { opacity: 0; top: 10px; }
+    100% { opacity: 1; top: 0px; }
+} */
+
+/* use sticky and top to make a cool background */
+

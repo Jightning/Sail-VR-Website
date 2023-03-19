@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Script for jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <!--Main Page-->
+    <title>Sail VR - Home</title>
+    <!--Describing Site-->
+    <meta name="description" content="Sail VR webpage">
+    <meta name="keywords" content="Sail VR, Sail, VR, Virtual Reality, Oculus, Steam, Quest, Quest 2, Meta, Red Team 19, Red Team Nineteen">
+    <!-- <meta name="author" content="Jightning"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <!--CHECK THIS - REFRESHES PAGE EVERY 14400 SECONDS-->
+    <meta http-equiv="refresh" content="14400">
+    <!--Linking CSS-->
+    <link rel="stylesheet" href="index_style.css">
+
+    <!--fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Almendra+SC&family=Chelsea+Market&display=swap');
+    </style>
+    <!--Logos from font awsome-->
+    <script src="https://kit.fontawesome.com/17b3b5d1f3.js" crossorigin="anonymous"></script>
+    
+    <!--Link to JavaScript file (index.js)-->
+    <script defer src="index.js"></script>
+    <!--Swipper for slideshow-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<!--REMEMBER TO REPLACE IMAGES-->
+<body>
+
+    <!--IMPORTANT -> WHEN DEPLOYING REOKACE DEVELOPMENT.JS WITH production.nim.js-->
+    <!-- <script src="indexTypeS.js"></script> -->
+
+    <!--Top bar-->
+    <div id="top_bar">
+        <nav>
+            <ul id="tbButtons">
+            <li><a class="tbClassButtons" id='New' href="#new">New</a></li>
+            <li class="downDroped"><a href="#downloads" id="Download" class="downlDrop">Download</a>
+                <div class="downlDropContent">
+                    <a class="tbClassButtonsDown toptopbar" href="https://www.oculus.com/experiences/quest/4861702420530349/" target=__blank title="This takes you to the early access version of Sail VR">Early Access - Meta Quest</a>
+                    <a class="tbClassButtonsDown" href="https://www.oculus.com/experiences/quest/4092537967425323/" target=_blank title="This takes you to the Demo of Sail VR">Demo - Meta Quest</a>
+                    <a class="tbClassButtonsDown bottomtopbar" href="https://store.steampowered.com/app/1684010/Sail/" target=_blank title="This takes you to the early access version of Sail VR">Early Access - Steam</a>
+                </div>
+            </li>
+<!--Above are the right side buttons, bellow are the left side buttons-->
+            <div id="rightBar">
+                <li class="downDroped"><a class="downlDrop" id="Support" href="#support">Support</a>
+                    <div class="downlDropContent">
+                        <a class="tbClassButtonsDown toptopbar" href="https://www.patreon.com/RedTeam19" target=__blank title="Support Sail VR at its Patreon!">Patreon</a>
+                        <a class="tbClassButtonsDown" href="https://www.paypal.com/donate/?hosted_button_id=985WERQZ8Z2YE" target=__blank title="Support Sail VR at its PayPal!">PayPal</a>
+                        <a class="tbClassButtonsDown bottomtopbar" href="https://www.amazon.com/shop/redteam19vr" target=_blank title="Check out some items on Amazon to support Sail VR!">Amazon</a>
+                    </div>
+                </li>
+                <li class="downDroped"><a class="downlDrop" id="Socials" href="#socials">Socials</a>
+                    <div class="downlDropContent">
+                        <a class="tbClassButtonsDown toptopbar" href="https://discord.com/invite/euazMmp" target=__blank title="Go to the Sail VR Discord">Discord</a>
+                        <a class="tbClassButtonsDown" href="https://twitter.com/RedTeam19_VR" target=_blank title="Go to the Sail VR Twitter">Twitter</a>
+                        <a class="tbClassButtonsDown" href="https://youtube.com/RedTeam19" target=_blank title="Go to the Sail VR YouTube">YouTube</a>
+                        <a class="tbClassButtonsDown" href="https://www.tiktok.com/@redteam19_vr" target=__blank title="Go to the Sail VR TikTok">TikTok</a>
+                        <a class="tbClassButtonsDown" href="https://www.instagram.com/redteam19_vr/" target=_blank title="Go to the Sail VR Instagram">Instagram</a>
+                        <a class="tbClassButtonsDown" href="https://www.facebook.com/groups/402090021877951/?ref=share" target=_blank title="Go to the Sail VR Facebook">Facebook</a>
+                        <a class="tbClassButtonsDown bottomtopbar" href="https://www.reddit.com/r/sailVR/" target=_blank title="Go to the Sail VR Reddit">Reddit</a>
+                    </div>
+                </li>
+            
+            </div>
+            </ul>
+        </nav>
+    </div>
+<!--Lil outlier cause placing an image ontop of a navbar is hard if they're in the same div-->
+    <a id="logo" href="#game_ex">
+        <img src="Optimized-Images/Sail Logo_wAclearPO.png" height = "150" width = "180" alt="This is the Sail VR Logo">
+    </a>
+
+
+    <!--Game Explanation-->
+    <section id="game_ex">
+        <br><br><br><br><br>
+        <h1 id="game_ex_h1" class="hide">Explore, plunder, collect!</h1>
+        <p id="geTp" class="hide">UNLEASH your Inner Pirate and explore the 7 seas, battling foes</p>
+        <p class="hide">and collecting treasure along the way!!!</p>
+    
+    <!-- <img src="Optimized-Images/Sail_edited_noBack4.png" height = "150" width = "330" alt="Screeshot displaying some ingame elements" id="display1"> -->
+
+
+        <iframe id="intro_vid" width="460" height="260" 
+        src="https://www.youtube.com/embed/YPCyx1h1rtU" title="Sail VR Trailer" alt="Sail VR Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        <hr>
+
+    </section>
+
+    <!--Game Explanation Elaboration-->
+    <section id="game_elab">
+        <!--This container seems useless, and should be, but for SOME REASON IS THE ONLY REASON THE PAGINATION BUTTONS APPEAR-->
+        <div class="slideshow-container hide">          
+            <!-- Slider main container -->
+            <div class="swiper hide">
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="unOptimized-Images/Sail img 5.jpg" style="width:100%"><h1>EXPLORE!</h1></div>
+                  <div class="swiper-slide"><img src="unOptimized-Images/Sail img 4.jpg" style="width:100%"><h1>CONQUER!</h1></div>
+                  <div class="swiper-slide"><img src="unOptimized-Images/Sail img 6.jpg" style="width:100%"><h1>PLUNDER!</h1></div>
+                </div>
+                <h1>Explore!</h1>
+                <div class="swiper-pagination"></div>
+            
+                <!--Navigation Buttons-->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+        </div>
+    </section>
+    <!--What's Next-->
+    <section id="whats_next">
+        <div id="whats_next_title" class="hide">
+            <h1 id="whats_next_Next">Upcoming</h1>
+
+            <ul id="whats_next_content">
+                <li>Multiplayer</li>
+                <li>Something else!</li>
+            </ul>
+            <img src='unOptimized-Images/glove_concept.jpg' alt='something!' id="whats_next_img">
+
+        </div>
+        
+        <div id="wnFillerImg" class="hide">
+            <h1>Updates Constantly!</h1>
+            <img src="unOptimized-Images/Spyglass.jpg" alt="Spyglasses">
+        </div>
+
+        <div id="NiMain-container" class="hide">
+            <div id="NiMain" class="hide">
+                <br>
+                <h2>Multiplayer<span>!</span></h2>
+                <p>The most anticipated feature of Sail VR!</p>
+                <p>Currently in development!</p>
+                <img src="Optimized-Images/Sail_edited_noBack4.png" alt="image">
+                <div id="secret_ducky"><img src="unOptimized-Images/rubber ducky.png" alt="Shhhhh Rubber Ducky" id='duckimg' onclick="secretDuckMove()"><h4 id="duckH4">shhhhhh try to find</h4><h3 id="duckH3">me in-game</h3><h4 id="duck_hiddenText">You'll Never Catch Me!!!</h4></div>
+            </div>
+        </div>
+    </section>
+    <!--New-->
+    <section id="new">
+        <a href="https://www.youtube.com/watch?v=f9mBqyAvls8" alt="Latest Devlog and What's New"  target=__blank><div id="whatsNew" class="newStuff"><br><h1>WHAT'S NEW</h1><br></div></a>
+        <div id="newBox" class='newStuff hide'>
+            
+        <div id="demoNew" class="boxesNew hide">
+            <h1>Demo:</h1>
+            <br><br>
+            <ul>
+                <li>* The Demo only covers a small portion of the game and receives updates a lot less frequently. If you enjoy the demo, it is recommended to purchase the Early Access, or the Patreon to have the full experience! *</li>
+            </ul>
+        </div>
+
+        <div id="earlyAccessNew" class="boxesNew hide">
+            <h1>Early Access:</h1>
+            <br>
+            <ul>
+                <li>Upd 1</li>
+                <li>Upd 1</li>
+                <img src="unOptimized-Images/Sail img 2.jpg" style="width:50%;" id="SNewImgs"><li>Upd 1</li></img>
+                <li>Upd 1</li>
+                <li>Upd 1</li>
+            </ul>
+        </div>
+
+        <div id="patreonNew" class="hide">
+            <h1>Patreon Exclusive:</h1>
+            <br>
+            <ul>
+                <li>Upd 1</li>
+                <li>Upd 1</li>
+                <li>Upd 1</li>
+                <li>Upd 1</li>
+                <li>Upd 1</li>
+            </ul>
+        </div>
+        </div>
+    </section>
+
+    <!--Downloads-->
+    <section id="downloads">
+        <h1 id="dlslogan">Are you ready to become the greatest pirate?!</h1>
+
+        <div id="oculusDl" class="dlbtndivs hide">
+            <h1>Download the Meta Early Access Here</h1>
+
+            <span class='ocDlspan'>
+                <h2>[Add some slogan here]</h2>
+                <a id='ocoDlbtn' href="https://www.oculus.com/experiences/quest/4861702420530349/" target=__blank title="This takes you to the early access version of Sail VR"><span>Early Access - Meta Quest</span></a>
+                <img src="unOptimized-Images/Spyglass.jpg"></img>
+            </span>
+        </div>
+
+        <div id="steamDl" class="dlbtndivs hide">
+            <h1>Download the Steam Early Access Here</h1>
+            <span class='stDlspan'>
+                <h2>[Add some slogan here]</h2>
+                <br>
+                <a id='stDlbtn' href="https://store.steampowered.com/app/1684010/Sail/" target=_blank title="This takes you to the early access version of Sail VR"><span>Early Access - Steam</span></a>
+                <br>
+
+                <img src="unOptimized-Images/glove_concept.jpg"></img>
+            </span>
+        </div>
+        <!--Left side usually gets more attention based on google, so the demo goes on the right-->
+        <div id="demoDl" class="dlbtndivs hide">
+            <h1>Download the Demo Here</h1>
+
+            <span class='demDlspan'>
+                <p>*Demo is only a part of the full experience, purchase the early access (above) or the patreon for the full experience!*</p>
+                <a id='demDlbtn' href="https://www.oculus.com/experiences/quest/4092537967425323/" target=_blank title="This takes you to the Demo of Sail VR">Demo - Meta Quest</a>
+            </span>
+        </div>
+        <span id="lilBorder"></span>
+    </section>
+
+    <!--Support-->
+    <section id="support">
+        <h1 id='sprt_title'>support the game bellow: </h1>
+        <div id="paypal_ben_cont" class="support_secs hide">
+            <h1>PayPal</h1>
+
+            <div id="paypalHid" class="supportHid">
+                <h2>There is a lot of stuff</h2>
+                <a class="supportbtns" id="supPaypalbtn" href="https://www.paypal.com/donate/?hosted_button_id=985WERQZ8Z2YE" target=__blank title="Support Sail VR at its PayPal!">PayPal</a>
+
+            </div>
+        </div>
+        <div id="store_ben_cont" class="support_secs hide">
+            <h1>SAIL STORE</h1>
+
+            <div id="storeHid" class="supportHid">
+                <h2>There is a lot of stuff</h2>
+                <a class="supportbtns" id="supAmazonbtn" href="https://www.amazon.com/shop/redteam19vr" target=_blank title="Check out some items on Amazon to support Sail VR!">Amazon</a>
+
+            </div>
+        </div>
+        <div id="patreon_ben_cont" class="support_secs hide">
+            <h1>PATREON</h1>
+
+            <div id="patreonHid" class="supportHid">
+                <h2>There is a lot of stuff</h2>
+                <a class="supportbtns" id="supPatreonbtn" href="https://www.patreon.com/RedTeam19" target=__blank title="Support Sail VR at its Patreon!">Patreon</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Socials-->
+    <section id="socials">
+        <h1 class="hide">Connect With Yee Fellow Maties!</h1>
+
+        <div id="blank_social_div" class="hide"><h1>shh</h1></div>
+    <!--Add hover anim. and links We can do filters which might be cool https://web.dev/learn/css/transitions/-->
+        <a id="soDis" class="hide socialbtn" href="https://discord.com/invite/euazMmp" target=_blank title="Go to the Sail VR Discord" alt="Sail VR Discord"><i class="fa-brands fa-discord fa-5x"></i></a>
+        <a id="soTw" class="hide socialbtn" href="https://twitter.com/RedTeam19_VR" target=_blank title="Go to the Sail VR Twitter" alt="Sail VR Twitter"><i class="fa-brands fa-twitter fa-5x"></i></a>
+        <a id="soYu" class="hide socialbtn" href="https://youtube.com/RedTeam19" target=_blank title="Go to the Sail VR YouTube" alt="Sail VR YouTube"><i class="fa-brands fa-youtube fa-5x"></i></a>
+        <a id="soTik" class="hide socialbtn" href="https://www.tiktok.com/@redteam19_vr" target=_blank title="Go to the Sail VR TikTok" alt="Sail VR TikTok"><i class="fa-brands fa-tiktok fa-5x"></i></a>
+        <a id="soInt" class="hide socialbtn" href="https://www.instagram.com/redteam19_vr/" target=_blank title="Go to the Sail VR Instagram" alt="Sail VR Instagram"><i class="fa-brands fa-instagram fa-5x"></i></a>
+        <a id="soFa" class="hide socialbtn" href="https://www.facebook.com/groups/402090021877951/?ref=share" target=_blank title="Go to the Sail VR Facebook" alt="Sail VR Facebook"><i class="fa-brands fa-square-facebook fa-5x"></i></a>
+        <a id="soRed" class="hide socialbtn" href="https://www.reddit.com/r/sailVR/" target=_blank title="Go to the Sail VR Reddit" alt="Sail VR Reddit"><i class="fa-brands fa-square-reddit fa-5x"></i></a>
+
+        <img class='hide hdieImgSoc' src="unOptimized-Images/Detector-conecpt-art.png"></img>
+    </section>
+
+
+    <!--swipper for slideshow-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+</html>
