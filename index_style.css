@@ -7,6 +7,8 @@
 html{
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
+
 }
 body{
     background-color: white;
@@ -27,6 +29,14 @@ section {
     scroll-snap-align: center;
     width: 100%
     /* Curse of not being able to write anything after this width for some reason that I can't explain */
+}
+@supports not (scroll-snap-align: start) {
+    html {
+      scroll-snap-type: y proximity;
+    }
+    body {
+      overflow-y: scroll;
+    }
 }  
 a{
     text-decoration: none;
@@ -138,36 +148,35 @@ ul{
     text-align: center;
     background: url('unOptimized-Images/sail_promo_v3 grunged.png') no-repeat center center/
     cover;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
 #game_ex h1{
     position: relative;
-    top: 2px;
+    top: 1%;
     /* border: solid rgba(156, 111, 43, 0.6); */
     /* background-color: rgba(197, 140, 54, 0.6); */
     border-width: 4px;
     border-bottom-width: 2px;
-    background-color: black;
+    /* background-color: rgba(214, 161, 15, 0.664); */
+    background-color: rgb(248, 244, 206);
     border-radius: 10px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    border-top: solid;
     padding: 10px;
     margin: 0.2px;
     font-size: 2.5vw;
+    border-width: 0.3vw;
 }
 #game_ex p{
+    position: relative;
+    top: 0.9%;
     font-weight: bold;
-    /* color: rgba(43, 29, 8, 0.6); */
-    color: white;
-    border-width: 4px;
-    /* background-color: rgba(228, 161, 62, 0.6);
-    border-top: solid rgba(179, 127, 51, 0.6);
-    border-bottom: solid rgba(179, 127, 51, 0.6); */
-    background-color: black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* background-color: rgba(214, 161, 15, 0.664); */
+    background-color: rgb(248, 244, 206);
+    color: black;
     padding: 10px;
     font-size: 1.55vw;
 
@@ -175,6 +184,13 @@ ul{
 #geTp{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-top: solid;
+}
+#geBt{
+    border-bottom: solid;
+    margin-bottom: 0.3%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 /* Game Explanation Elaboration Section: */
 #game_elab{
@@ -248,11 +264,6 @@ ul{
     transition: all .5s ease 0.25s;
 }
 @media screen and (max-width: 1045px){
-    #whats_next_Next{
-        left: -.5%;
-    }
-}
-@media screen and (max-height: 1045px){
     #whats_next_Next{
         left: -.5%;
     }
@@ -915,7 +926,7 @@ ul{
 }
 #socials a{
     position: relative;
-    top: 35%;
+    top: 35.5%;
     left: 14.5%;
     margin: 2%;
     color: rgb(250, 250, 250); 
